@@ -49,6 +49,9 @@ int commandMode(void)
 
 		// Get user input
 		scanf("%63s", &cmd);
+		
+		// Flush stdin
+		flushStdin();
 
 		// Remove case sensitivity
 		for(size_t i = 0 ; i < strlen(cmd) ; i++)
@@ -101,9 +104,6 @@ int commandMode(void)
 				return 1;
 				break;
 		}
-
-		// Flush stdin
-		flushStdin();
 	}
 
 	return 0;
